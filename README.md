@@ -30,4 +30,5 @@ You may now remove the following files in the new project directory, to 'eject' 
 ## Build
 
 * Run `npm run build` for a single build
+* Run `npm run build:prod` for a minified build (minified by [Babili](https://github.com/babel/babili))
 * Run `npm start`/`npm run build:watch` for a continuous build while editing files
