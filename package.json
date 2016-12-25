@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
+    "build:prod": "NODE_ENV=production npm run build",
     "build:watch": "webpack --watch",
     "start": "npm run build:watch",
     "postinstall": "npm run build"
