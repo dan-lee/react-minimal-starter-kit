@@ -1,5 +1,7 @@
 # react-minimal-starter-kit
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/dan-lee/react-minimal-starter-kit.svg)](https://greenkeeper.io/)
+
 I've seen a lot of bootstrap or minimal React setups for developers. But they all seem kinda bloated.
 
 All I wanted is the minimal setup with: 
