@@ -1,29 +1,24 @@
-const BabiliPlugin = require('babili-webpack-plugin')
+const path = require('path')
+const webpack = require('webpack')
 
 let plugins = []
 
 if (process.env.NODE_ENV === 'production') {
-  plugins.push(new BabiliPlugin())
+  plugins.push(new webpack.optimize.UglifyJsPlugin())
 }
 
 module.exports = {
   entry: './src/App.jsx',
   output: {
-    path: 'static/js',
+    path: path.resolve(__dirname, 'static/js'),
     filename: 'bundle.js'
   },
   plugins: plugins,
   module: {
-    loaders: [
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['es2015', 'react'],
-          plugins: ['transform-runtime']
-        }
-      }
-    ]
+    rules: [{
+      test: /\.jsx?$/,
+      exclude: /node_modules/,
+      loader: 'babel-loader',
+    }]
   }
 }
