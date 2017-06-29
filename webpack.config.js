@@ -8,10 +8,13 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 module.exports = {
-  entry: './src/App.jsx',
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'static/js'),
     filename: 'bundle.js'
+  },
+  resolve: {
+    extensions: ['.js', '.jsx']
   },
   plugins: plugins,
   module: {

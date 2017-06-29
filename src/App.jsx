@@ -1,15 +1,10 @@
-import React, { Component } from 'react'
-import { render } from 'react-dom'
+import React from 'react'
+import PropTypes from 'prop-types'
 
-class App extends Component {
-  render () {
-    return (
-      <div>
-        Welcome to {this.props.name}.
-      </div>
-    )
-  }
+const App = (props) => <div>Welcome to {props.name}</div>
+
+App.propTypes = {
+  name: PropTypes.string
 }
 
-const mountNode = document.getElementById('app')
-render(<App name="my super awesome app built with React" />, mountNode)
+export default App
