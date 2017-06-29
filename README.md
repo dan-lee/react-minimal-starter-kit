@@ -10,7 +10,7 @@ All I wanted is the minimal setup with:
 
 No server side rendering, configuration frameworks, routers, stores or other libraries.
 
-It'll just get you started. Everything is up to you.
+It'll just get you started. Everything else is up to you.
 
 ## How to install
 
