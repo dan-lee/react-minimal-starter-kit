@@ -2,9 +2,10 @@
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/dan-lee/react-minimal-starter-kit.svg)](https://greenkeeper.io/)
 
-I've seen a lot of bootstrap or minimal React setups for developers. But they all seem kinda bloated.
+I've seen a lot of bootstrap or minimal React setups for developers. But they all seem kinda bloated. Even `create-react-app` is bloated as soon as you eject.
 
 All I wanted is the minimal setup with: 
+
 * React
 * Babel
 * webpack
