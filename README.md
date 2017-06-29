@@ -1,6 +1,4 @@
-# react-minimal-starter-kit
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/dan-lee/react-minimal-starter-kit.svg)](https://greenkeeper.io/)
+# react-minimal-starter-kit [![Build Status](https://travis-ci.org/dan-lee/react-minimal-starter-kit.svg?branch=master)](https://travis-ci.org/dan-lee/react-minimal-starter-kit) [![Greenkeeper badge](https://badges.greenkeeper.io/dan-lee/react-minimal-starter-kit.svg)](https://greenkeeper.io/)
 
 I've seen a lot of bootstrap or minimal React setups for developers. But they all seem kinda bloated. Even `create-react-app` is bloated as soon as you eject.
 
@@ -16,17 +14,12 @@ It'll just get you started. Everything is up to you.
 
 ## How to install
 
-Execute `git clone --depth=1 --branch=master https://github.com/dan-lee/react-minimal-starter-kit.git yourProject`.
+Execute `git clone --depth=1 --branch=master https://github.com/dan-lee/react-minimal-starter-kit.git YOUR_PROJECT`.
   
 You may now remove the following files in the new project directory, to 'eject' from the original repository:
 
-* `${yourProject}/.git`
-* `${yourProject}/README.md`
-* `${yourProject}/LICENSE`
-* `${yourProject}/.travis.yml`
-
 ```sh
-rm -r .git/ README.md LICENSE .travis.yml
+cd YOUR_PROJECT && rm -r .git/ README.md LICENSE .travis.yml
 ``` 
 
 ## Information
@@ -38,6 +31,10 @@ rm -r .git/ README.md LICENSE .travis.yml
 
 ## Build
 
-* Run `npm run build` for a single build
-* Run `npm run build:prod` for a minified build (minified by `UglifyJs` provided by `webpack`)
-* Run `npm start`/`npm run build:watch` for a continuous build while editing files
+* Run `yarn build` for a single build
+* Run `yarn build:prod` for a minified build (minified by `UglifyJs` provided by `webpack`)
+* Run `yarn start`/`yarn build:watch` for a continuous build while editing files
+
+## Tests
+
+* Run `yarn test`
