@@ -19,7 +19,8 @@ Execute `git clone --depth=1 --branch=master https://github.com/dan-lee/react-mi
 You may now remove the following files in the new project directory, to 'eject' from the original repository:
 
 ```sh
-cd YOUR_PROJECT && rm -r .git/ README.md LICENSE .travis.yml
+cd YOUR_PROJECT
+rm -rf .git/ README.md LICENSE .travis.yml
 ``` 
 
 ## Information
