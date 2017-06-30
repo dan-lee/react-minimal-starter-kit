@@ -4,9 +4,9 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "build:prod": "NODE_ENV=production npm run build",
-    "build:watch": "webpack --watch",
-    "start": "npm run build:watch",
+    "build:prod": "webpack -p",
+    "watch": "webpack-dev-server --open",
+    "start": "npm run watch",
     "test": "jest",
     "postinstall": "npm run test && npm run build"
   },
@@ -22,7 +22,9 @@
     "babel-preset-env": "^1.5.2",
     "babel-preset-react": "^6.24.1",
     "jest": "^20.0.4",
+    "react-hot-loader": "^3.0.0-beta.6",
     "react-test-renderer": "^15.6.1",
-    "webpack": "^3.0.0"
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.5.0"
   }
 }

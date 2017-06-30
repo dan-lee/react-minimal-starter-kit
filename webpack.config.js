@@ -1,16 +1,23 @@
 const path = require('path')
 const webpack = require('webpack')
+const ENV = process.env.NODE_ENV || 'development'
+const appendIf = (cond, ...items) => cond ? items : []
 
-let plugins = []
-
-if (process.env.NODE_ENV === 'production') {
-  plugins.push(new webpack.optimize.UglifyJsPlugin())
-}
+const plugins = [
+  new webpack.DefinePlugin({
+    'process.env': { NODE_ENV: JSON.stringify(ENV) }
+  }),
+  ...appendIf(ENV === 'production', new webpack.optimize.UglifyJsPlugin()),
+  ...appendIf(ENV !== 'production', new webpack.HotModuleReplacementPlugin())
+]
 
 module.exports = {
-  entry: './src/index.js',
+  entry: [
+    'react-hot-loader/patch',
+    './src/index.js'
+  ],
   output: {
-    path: path.resolve(__dirname, 'static/js'),
+    path: path.resolve(__dirname, 'static'),
     filename: 'bundle.js'
   },
   resolve: {
@@ -21,7 +28,12 @@ module.exports = {
     rules: [{
       test: /\.jsx?$/,
       exclude: /node_modules/,
-      loader: 'babel-loader',
+      loaders: ['react-hot-loader/webpack', 'babel-loader'],
     }]
+  },
+  devServer: {
+    hot: true,
+    contentBase: path.join(__dirname, 'static'),
+    publicPath: '/'
   }
 }
