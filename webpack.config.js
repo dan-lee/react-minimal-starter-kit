@@ -4,10 +4,6 @@ const ENV = process.env.NODE_ENV || 'development'
 const appendIf = (cond, ...items) => cond ? items : []
 
 const plugins = [
-  new webpack.DefinePlugin({
-    'process.env': { NODE_ENV: JSON.stringify(ENV) }
-  }),
-  ...appendIf(ENV === 'production', new webpack.optimize.UglifyJsPlugin()),
   ...appendIf(ENV !== 'production', new webpack.HotModuleReplacementPlugin())
 ]
 
@@ -28,7 +24,10 @@ module.exports = {
     rules: [{
       test: /\.jsx?$/,
       exclude: /node_modules/,
-      loaders: ['react-hot-loader/webpack', 'babel-loader'],
+      loaders: [
+        'react-hot-loader/webpack',
+        'babel-loader'
+      ],
     }]
   },
   devServer: {
