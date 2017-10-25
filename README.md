@@ -14,7 +14,7 @@ It'll just get you started. Everything else is up to you.
 
 ## How to install
 
-Execute `git clone --depth=1 --branch=master https://github.com/dan-lee/react-minimal-starter-kit.git YOUR_PROJECT`.
+Execute `git clone --depth=1 --branch=master https://github.com/dan-lee/react-minimal-starter-kit.git YOUR_PROJECT`, and then run `yarn`.
   
 You may now remove the following files in the new project directory, to 'eject' from the original repository:
 
