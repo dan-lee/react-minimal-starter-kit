@@ -1,4 +1,5 @@
-# react-minimal-starter-kit [![Build Status](https://travis-ci.org/dan-lee/react-minimal-starter-kit.svg?branch=master)](https://travis-ci.org/dan-lee/react-minimal-starter-kit) [![Greenkeeper badge](https://badges.greenkeeper.io/dan-lee/react-minimal-starter-kit.svg)](https://greenkeeper.io/)
+# react-minimal-starter-kit [![Build Status](https://travis-ci.org/dan-lee/react-minimal-starter-kit.svg?branch=master)](https://travis-ci.org/dan-lee/react-minimal-starter-kit) [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovateapp.com/)
+
 
 I've seen a lot of bootstrap or minimal React setups for developers. But they all seem kinda bloated. Even `create-react-app` is bloated as soon as you eject.
 
