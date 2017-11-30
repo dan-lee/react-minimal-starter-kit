@@ -1,38 +1,31 @@
 const path = require('path')
 const webpack = require('webpack')
-const ENV = process.env.NODE_ENV || 'development'
-const appendIf = (cond, ...items) => cond ? items : []
-
-const plugins = [
-  ...appendIf(ENV !== 'production', new webpack.HotModuleReplacementPlugin())
-]
 
 module.exports = {
-  entry: [
-    'react-hot-loader/patch',
-    './src/index.js'
-  ],
+  entry: ['react-hot-loader/patch', './src/index.js'],
   output: {
     path: path.resolve(__dirname, 'static'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
   },
-  plugins: plugins,
+  plugins: [
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+  ],
   module: {
-    rules: [{
-      test: /\.jsx?$/,
-      exclude: /node_modules/,
-      loaders: [
-        'react-hot-loader/webpack',
-        'babel-loader'
-      ],
-    }]
+    rules: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loaders: ['react-hot-loader/webpack', 'babel-loader'],
+      },
+    ],
   },
   devServer: {
     hot: true,
     contentBase: path.join(__dirname, 'static'),
-    publicPath: '/'
-  }
+    publicPath: '/',
+  },
 }
