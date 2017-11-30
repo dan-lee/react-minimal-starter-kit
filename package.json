@@ -7,8 +7,7 @@
     "build:prod": "webpack -p",
     "watch": "webpack-dev-server --open",
     "start": "yarn watch",
-    "test": "jest",
-    "postinstall": "yarn test && yarn build"
+    "test": "jest"
   },
   "dependencies": {
     "prop-types": "15.6.0",
