@@ -2,24 +2,23 @@ const path = require('path')
 const webpack = require('webpack')
 
 module.exports = {
-  entry: ['react-hot-loader/patch', './src/index.js'],
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'static'),
     filename: 'bundle.js',
   },
-  resolve: {
-    extensions: ['.js', '.jsx'],
-  },
   plugins: [
-    new webpack.NamedModulesPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
+    new webpack.HotModuleReplacementPlugin()
   ],
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.js$/,
         exclude: /node_modules/,
-        loaders: ['react-hot-loader/webpack', 'babel-loader'],
+        loader: 'babel-loader',
+        options: {
+          cacheDirectory: true,
+        },
       },
     ],
   },
