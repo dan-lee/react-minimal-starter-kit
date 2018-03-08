@@ -27,5 +27,6 @@ module.exports = {
     hot: true,
     contentBase: path.join(__dirname, 'static'),
     publicPath: '/',
+    historyApiFallback: true,
   },
 }
