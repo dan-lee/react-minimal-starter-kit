@@ -1,15 +1,13 @@
 const path = require('path')
-const webpack = require('webpack')
+
+const STATIC_PATH = path.join(__dirname, 'static')
 
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'static'),
+    path:  STATIC_PATH,
     filename: 'bundle.js',
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ],
   module: {
     rules: [
       {
@@ -23,8 +21,7 @@ module.exports = {
     ],
   },
   devServer: {
-    hot: true,
-    contentBase: path.join(__dirname, 'static'),
+    contentBase: STATIC_PATH,
     publicPath: '/',
   },
 }
