@@ -23,5 +23,6 @@ module.exports = {
   devServer: {
     contentBase: STATIC_PATH,
     publicPath: '/',
+    historyApiFallback: true,
   },
 }
