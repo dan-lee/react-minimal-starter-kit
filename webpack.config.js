@@ -1,31 +1,27 @@
 const path = require('path')
-const webpack = require('webpack')
+
+const STATIC_PATH = path.join(__dirname, 'static')
 
 module.exports = {
-  entry: ['react-hot-loader/patch', './src/index.js'],
+  entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'static'),
+    path:  STATIC_PATH,
     filename: 'bundle.js',
   },
-  resolve: {
-    extensions: ['.js', '.jsx'],
-  },
-  plugins: [
-    new webpack.NamedModulesPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-  ],
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.js$/,
         exclude: /node_modules/,
-        loaders: ['react-hot-loader/webpack', 'babel-loader'],
+        loader: 'babel-loader',
+        options: {
+          cacheDirectory: true,
+        },
       },
     ],
   },
   devServer: {
-    hot: true,
-    contentBase: path.join(__dirname, 'static'),
+    contentBase: STATIC_PATH,
     publicPath: '/',
     historyApiFallback: true,
   },
