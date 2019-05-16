@@ -21,7 +21,7 @@
     "babel-preset-env": "1.7.0",
     "babel-preset-react": "6.24.1",
     "jest": "23.6.0",
-    "react-hot-loader": "4.8.4",
+    "react-hot-loader": "4.8.5",
     "react-test-renderer": "16.8.6",
     "webpack": "4.31.0",
     "webpack-cli": "3.3.2",
