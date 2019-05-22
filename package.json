@@ -23,7 +23,7 @@
     "jest": "23.6.0",
     "react-hot-loader": "4.8.7",
     "react-test-renderer": "16.8.6",
-    "webpack": "4.32.0",
+    "webpack": "4.32.1",
     "webpack-cli": "3.3.2",
     "webpack-dev-server": "3.4.1"
   }
