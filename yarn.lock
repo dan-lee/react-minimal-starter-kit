@@ -4840,9 +4840,9 @@ react-dom@16.9.0:
     prop-types "^15.6.2"
     scheduler "^0.15.0"
 
-react-hot-loader@4.12.11:
-  version "4.12.11"
-  resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-4.12.11.tgz#06bd618d0a7343c8afa4a31206844f651193bae5"
+react-hot-loader@4.12.14:
+  version "4.12.14"
+  resolved "https://registry.yarnpkg.com/react-hot-loader/-/react-hot-loader-4.12.14.tgz#81ca06ffda0b90aad15d6069339f73ed6428340a"
   dependencies:
     fast-levenshtein "^2.0.6"
     global "^4.3.0"
