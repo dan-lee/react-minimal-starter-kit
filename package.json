@@ -16,11 +16,11 @@
   },
   "devDependencies": {
     "babel-core": "6.26.3",
-    "babel-jest": "23.6.0",
+    "babel-jest": "27.3.0",
     "babel-loader": "8.0.6",
     "babel-preset-env": "1.7.0",
     "babel-preset-react": "6.24.1",
-    "jest": "23.6.0",
+    "jest": "27.3.0",
     "react-hot-loader": "4.12.16",
     "react-test-renderer": "16.11.0",
     "webpack": "4.41.2",
